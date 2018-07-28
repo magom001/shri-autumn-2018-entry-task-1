@@ -40,6 +40,8 @@ export function initMap(ymaps, containerId) {
     }
   });
 
+  myMap.geoObjects.add(objectManager);
+
   // filters
   const listBoxControl = createFilterControl(ymaps);
   myMap.controls.add(listBoxControl);
