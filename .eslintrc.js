@@ -3,6 +3,8 @@ module.exports = {
   env: { browser: true },
   parser: "babel-eslint",
   rules: {
+    "func-names": 0,
+    "object-shorthand": 0,
     "arrow-parens": 0,
     "implicit-arrow-linebreak": 0,
     "import/prefer-default-export": "off",
