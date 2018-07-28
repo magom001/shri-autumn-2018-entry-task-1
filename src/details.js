@@ -1,4 +1,4 @@
-import { createChart } from './chart';
+import { createChart } from "./chart";
 
 export function getDetailsContentLayout(ymaps) {
   const BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -33,7 +33,7 @@ export function getDetailsContentLayout(ymaps) {
         const { details } = this.getData().object.properties;
 
         if (details) {
-          const container = this.getElement().querySelector('.details-chart');
+          const container = this.getElement().querySelector(".details-chart");
 
           this.connectionChart = createChart(
             container,

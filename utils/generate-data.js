@@ -1,4 +1,4 @@
-const faker = require('faker');
+import faker from "faker";
 
 function rand() {
   const rnd = Math.random() - 0.5;
@@ -15,10 +15,10 @@ function generateChartData(isActive) {
     .map((el, i) => (i < count ? Math.floor(Math.random() * 7) + 2 : 0));
 }
 
-exports.generateData = function() {
+exports.generateData = () => {
   const data = [];
 
-  for (let i = 0; i < 721; i++) {
+  for (let i = 0; i < 721; i += 1) {
     data.push({
       serialNumber: faker.address.zipCode(),
       isActive: Math.random() > 0.03,
@@ -30,11 +30,11 @@ exports.generateData = function() {
   return data;
 };
 
-exports.generateDetails = function({ isActive }) {
+exports.generateDetails = ({ isActive }) => {
   const connections = isActive ? Math.floor(Math.random() * 7) + 4 : 0;
 
   return {
-    connections: connections,
+    connections,
     chart: generateChartData(isActive).concat(connections)
   };
 };
