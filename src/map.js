@@ -19,8 +19,6 @@ export function initMap(ymaps, containerId) {
     geoObjectBalloonContentLayout: getDetailsContentLayout(ymaps)
   });
 
-  objectManager.clusters.options.set("preset", "islands#greenClusterIcons");
-
   loadList().then(data => {
     objectManager.add(data);
   });
